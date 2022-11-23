@@ -71,7 +71,7 @@
               color="green"
               label="Tạo thiệp"
               @click="createPicture"
-              :disable="name.length <= 0"
+              :disable="!name || name.length <= 0"
             />
             <q-btn class="q-ma-sm"
                glossy
