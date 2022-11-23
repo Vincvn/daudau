@@ -76,7 +76,7 @@
             <q-btn class="q-ma-sm"
                glossy
                color="green"
-               label="Tạo thiệp hoàn loạt"
+               label="Tạo thiệp hàng loạt"
                @click="DoCreatePictureList"
                :disable="names.length <= 0"
                :loading="creating"
@@ -222,6 +222,7 @@ export default {
             if(i === app.names.length-1){
               setTimeout(()=>{
                 myNode.innerHTML = '';
+                app.names = []
               },5000)
             }
           })
