@@ -97,7 +97,7 @@
             />
           </q-card-section>
         </q-card>
-        <canvas class="col-auto q-ma-md" id='canvas' width="800" height="700" />
+        <canvas class="col-auto q-ma-md" id='canvas' width="900" height="900" />
       </div>
     </q-page-container>
     <div id="multi_canvas" style="visibility: hidden; max-height: 1px; max-width: 1px" />
@@ -159,13 +159,13 @@ export default {
       const app = this
       const printName = app.name.toUpperLetter()
       fabric.Image.fromURL('/daudau3.png', function(oImg) {
-        oImg.scaleToWidth(375)
-        oImg.scaleToHeight(667)
+        oImg.scaleToWidth(900, true)
+        oImg.scaleToHeight(900, true)
         const text = new fabric.Text(printName, {
-          left: 268,
-          top: 482,
+          left: 368,
+          top: 650,
           fontFamily: 'Quicksand',
-          fontSize: 23.6,
+          fontSize: 32.5,
           fontWeight: 'bold',
         })
         text.set({fill: app.color})
@@ -197,19 +197,19 @@ export default {
           const name = app.names[i]
           const canvas_element = document.createElement('canvas');
           canvas_element.id = `canvas_${name.name}`;
-          canvas_element.width = 800
-          canvas_element.height = 700
+          canvas_element.width = 900
+          canvas_element.height = 900
           myNode.appendChild(canvas_element)
           const canvas = new fabric.Canvas(`canvas_${name.name}`);
           const printName = name.name
           fabric.Image.fromURL('/daudau3.png', function(oImg) {
-            oImg.scaleToWidth(375)
-            oImg.scaleToHeight(667)
+            oImg.scaleToWidth(900, true)
+            oImg.scaleToHeight(900, true)
             const text = new fabric.Text(printName, {
-              left: 268,
-              top: 482,
+              left: 368,
+              top: 650,
               fontFamily: 'Quicksand',
-              fontSize: 23.6,
+              fontSize: 32.5,
               fontWeight: 'bold',
             })
             text.set({fill: app.color})
